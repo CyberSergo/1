@@ -1,0 +1,289 @@
+body {
+  background-color: #0f133c;
+  font-family: 'Lexend Exa';
+}
+
+#first-menu {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#categories {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10vh;
+}
+
+#categories2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10vh;
+  width: 80%;
+  margin: 0 auto;
+  display: none;
+}
+
+:hover.sub-categories2 {
+  background-color: #fcd561;
+  color: #0f133c;
+}
+
+.sub-categories3 {
+  border-radius: 28px;
+  padding: 12px;
+  text-align: center;
+  margin: 7px;
+  color: rgb(184, 184, 184);
+  padding-inline: 20px;
+  cursor: pointer;
+  background-color: #261462;
+}
+
+.sub-categories2 {
+  border-radius: 28px;
+  padding: 12px;
+  text-align: center;
+  margin: 7px;
+  color: rgb(184, 184, 184);
+  padding-inline: 20px;
+  cursor: pointer;
+  background-color: #261462;
+}
+
+#all-button {
+  display: none;
+}
+
+#button {
+  position: fixed;
+  left: 40%;
+  bottom: 3vh;
+  width: 20%;
+  padding: 13px;
+  border-radius: 15px;
+  font-family: 'Lexend Exa';
+}
+
+#backButton {
+  color: rgb(184, 184, 184);
+  background-color: #0f133c;
+  border: 0;
+  font-size: 27px;
+}
+
+#second-header {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 6vh;
+  margin-bottom: 4vh;
+  display: none;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+  margin-top: 13vh;
+  border-radius: 27px;
+  margin-bottom: 13vh;
+  width: 80%;
+}
+
+.sub-categories {
+  background-image: linear-gradient(
+    -21deg,
+    rgb(155, 22, 15),
+    rgb(141, 245, 22)
+  );
+  border-radius: 28px;
+  padding: 10px;
+  text-align: center;
+  margin: 7px;
+  color: white;
+  padding-inline: 20px;
+  cursor: pointer;
+}
+
+.header {
+  width: 80%;
+  font-size: 3em;
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 10vh;
+  margin-top: 15vh;
+}
+
+#jokes {
+  width: 80%;
+  margin: 0 auto;
+  display: none;
+}
+
+#jokes img {
+  width: 300px;
+}
+
+.jokes-block {
+  background: #261462;
+  padding: 62px;
+  margin-top: 3vh;
+  color: rgb(184, 184, 184);
+  border-radius: 28px;
+  margin-bottom: 5vh;
+  transition-duration: 1s;
+}
+
+.jokes-block:last-child {
+  margin-bottom: 15vh;
+}
+
+#choose-category {
+  text-align: center;
+  color: rgb(184, 184, 184);
+  font-size: 2em;
+  margin: 0 auto;
+  padding-bottom: 1px;
+}
+
+#empty-element {
+  font-size: 32px;
+  opacity: 0;
+}
+
+/* Slick slider */
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {  
+  display: flex;
+  outline: none;
+}
+
+#sliders-jokes .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-right: 40px;
+}
+
+#sliders-jokes .slick-dots li {
+  list-style: none;
+  margin: 10px;
+}
+
+#sliders-jokes .slick-dots li.slick-active button {
+  background-color: transparent;
+  border-color: black;
+}
+
+#sliders-jokes .slick-dots li button {
+  font-size: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 15px;
+  background-color: white;
+}
+
+#sliders-jokes {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  background: #261462;
+  padding-left: 62px;
+  padding-right: 62px;
+  margin-top: 3vh;
+  color: rgb(184, 184, 184);
+  border-radius: 28px;
+  margin-bottom: 5vh;
+  transition-duration: 1s;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.slider-chuck-joke {
+  margin-top: 8%;
+}
+
+#sliders-jokes .slick-arrow {
+  position: absolute;
+  font-size: 0;
+  width: 30px;
+  height: 32px;
+  background: no-repeat;
+  border: 0;
+}
+
+#sliders-jokes .slick-arrow.slick-prev {
+  background-image: url('/img/icons8-arrow-left.png');
+  left: 0;
+  top: 40%;
+  background-size: 107%;
+  outline: none;
+}
+
+#sliders-jokes .slick-arrow.slick-next {
+  background-image: url('/img/icons8-arrow-100.png');
+  right: 0;
+  top: 40%;
+  background-size: 107%;
+  outline: none;
+}
+
+/* Mobile version */
+
+@media (max-device-width: 480px) {
+  #button {
+    width: 80%;
+    left: 10%;
+  }
+
+  .sub-categories {
+    padding-inline: 25px;
+  }
+
+  img {
+    width: 90%;
+    margin-top: 1vh;
+  }
+
+  .header {
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+  }
+
+  #categories {
+    margin-bottom: 5vh;
+  }
+
+  .sub-categories2 {
+    padding-inline: 25px;
+  }
+
+  #categories2 {
+    width: 95%;
+    overflow-x: auto;
+    margin-left: 5%;
+    flex-wrap: nowrap;
+  }
+
+  #first-menu {
+    width: 90%;
+    font: -webkit-mini-control;
+  }
+
+  #jokes {
+    width: 90%;
+  }
+
+  #second-header {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    display: none;
+  }
+}
