@@ -23,11 +23,6 @@ body {
   display: none;
 }
 
-:hover.sub-categories2 {
-  background-color: #fcd561;
-  color: #0f133c;
-}
-
 .sub-categories3 {
   border-radius: 28px;
   padding: 12px;
@@ -54,7 +49,7 @@ body {
   display: none;
 }
 
-#button {
+#button-continue {
   position: fixed;
   left: 40%;
   bottom: 3vh;
@@ -235,7 +230,7 @@ img {
 /* Mobile version */
 
 @media (max-device-width: 480px) {
-  #button {
+  #button-continue {
     width: 80%;
     left: 10%;
   }

@@ -2,7 +2,7 @@ const urlArrJokes = 'https://api.chucknorris.io/jokes/categories';
 
 
 
-// Function for make random gradients buttons 
+// Function for making random gradients buttons
 function generate() {
     var hexValues = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e',];
 
@@ -29,21 +29,15 @@ fetch(urlArrJokes)
     .then(result => {
         return result.json();
     }).then(data => { // categories of jokes
+        let category = document.getElementById('categories');
         for (let i = 0; i < data.length; i++) {
-            let categorie = document.getElementById('categories');
-            categorie.innerHTML = categorie.innerHTML + "<div id='sub-categories" + i + "' class='sub-categories' onclick='openJokes(" + i + ")'>" + data[i] + '</div>';
-            // categorie.innerHTML + `<div id="sub-categories${i}" class="sub-categories" onclick="openJokes(${i})"> ${data[i]} </div>`;
-
-            document.getElementById(
-                'sub-categories' + i
-            ).style.background = generate();
+            category.innerHTML = category.innerHTML + `<div style="background: ${generate()}" id= "sub-categories${i}" class= "sub-categories" onclick= "openJokes(${i})">${data[i]}</div>`;
         }
 
         // Second menu buttons without gradient color
         let categories2 = document.getElementById('categories2');
 
         for (let i = 0; i < data.length; i++) {
-            // categories2.innerHTML = categories2.innerHTML + "<div id='sub-categories2" + i + "' class='sub-categories2' onclick='openJokes(" + i + ")'>" + data[i] + '</div>';
             categories2.innerHTML = categories2.innerHTML + `<div id="sub-categories2${i}" class="sub-categories2" onclick="openJokes(${i})"> ${data[i]} </div>`
         }
 
@@ -54,18 +48,18 @@ fetch(urlArrJokes)
 function openJokes(e) {
     let jokes = document.getElementById('jokes');
     jokes.innerHTML = '<img src="/img/821.gif" alt="" srcset="">';
-    let categorieJokes = document.getElementById('sub-categories' + e).innerText;
+    let categoryJokes = document.getElementById('sub-categories' + e).innerText;
     document.getElementById('header').style.display = 'none';
     document.getElementById('image').style.display = 'none';
     document.getElementById('second-header').style.display = 'flex';
-    document.getElementById('choose-category').innerHTML = '<span>' + categorieJokes + '</span>';
+    document.getElementById('choose-category').innerHTML = '<span>' + categoryJokes + '</span>';
     document.getElementById('jokes').style.display = 'block';
     document.getElementById('first-menu').style.display = 'none';
     document.getElementById('categories2').style.display = 'flex';
     document.getElementById('sliders-jokes').style.display = 'none';
     // Promise for get 5 jokes
 
-    const urlJoke = 'https://api.chucknorris.io/jokes/random?category=' + categorieJokes;
+    const urlJoke = 'https://api.chucknorris.io/jokes/random?category=' + categoryJokes;
     let futureInner = '';
 
     new Promise(function (resolve, reject) {
@@ -150,12 +144,10 @@ let sliderJokes = new Promise(function (resolve, reject) {
 
 // Slick slider
 
-function slider(){
-    $(document).ready(function () {
-        $('#sliders-jokes').slick({
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 5000,
-        });
+function slider() {
+    $('#sliders-jokes').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
     });
 }
