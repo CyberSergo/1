@@ -50,6 +50,7 @@ body {
 }
 
 #button-continue {
+  background-color: rgb(255, 255, 255) !important;
   position: fixed;
   left: 40%;
   bottom: 3vh;
@@ -277,7 +278,7 @@ img {
   }
 
   #second-header {
-    width: 90%;
+    width: 95%;
     display: flex;
     margin: 0 auto;
     margin-top: 6vh;
@@ -291,5 +292,13 @@ img {
 
   #sliders-jokes {
     width: 95%;
+  }
+
+  body {
+    margin: 0px;
+  }
+
+  #sliders-jokes .slick-dots li button {
+    height: 10px;
   }
 }
