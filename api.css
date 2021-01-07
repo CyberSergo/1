@@ -240,7 +240,7 @@ img {
   }
 
   img {
-    width: 90%;
+    width: 95%;
     margin-top: 1vh;
   }
 
@@ -250,7 +250,11 @@ img {
   }
 
   #categories {
-    margin-bottom: 5vh;
+    width: 95%;
+    overflow-x: auto;
+    margin-left: 5%;
+    flex-wrap: nowrap;
+    display: flex;
   }
 
   .sub-categories2 {
@@ -265,8 +269,7 @@ img {
   }
 
   #first-menu {
-    width: 90%;
-    font: -webkit-mini-control;
+    width: 100%;
   }
 
   #jokes {
@@ -280,5 +283,13 @@ img {
     margin-top: 6vh;
     margin-bottom: 4vh;
     display: none;
+  }
+
+  #jokes img{
+    margin-top: 25vh;
+  }
+
+  #sliders-jokes {
+    width: 95%;
   }
 }
